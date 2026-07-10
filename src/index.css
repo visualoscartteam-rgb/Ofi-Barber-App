@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal-50: #e6fffa;
+  --color-teal-100: #b2f5ea;
+  --color-teal-200: #81e6d9;
+  --color-teal-300: #35ECDE;
+  --color-teal-400: #35ECDE;
+  --color-teal-500: #35ECDE;
+  --color-teal-600: #22c7bc;
+  --color-teal-700: #1da59c;
+  --color-teal-800: #177f78;
+  --color-teal-900: #115853;
+}
+
+@layer base {
+  body {
+    @apply bg-[#09090b] text-white;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom Loader Progress Animation */
+@keyframes loader-progress {
+  0% {
+    left: -40%;
+    width: 40%;
+  }
+  50% {
+    width: 60%;
+  }
+  100% {
+    left: 100%;
+    width: 20%;
+  }
+}
+
+.animate-progress-slide {
+  animation: loader-progress 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
